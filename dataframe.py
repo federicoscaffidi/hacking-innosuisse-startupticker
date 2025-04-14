@@ -26,15 +26,14 @@ def make_df():
     # Reduce dataframe
     df_deals_reduced = df_deals.iloc[:10, :]
 
-    '''
     # Add articles
     df_deals_reduced['Article Summary'] = df_deals_reduced['URL'].apply(get_text_from_url)
 
     # Update dataframe
     df_deals['Article Summary'] = df_deals_reduced['Article Summary']
-    '''
     
-    df_deals = pd.read_csv("df_deals.csv")
+    # Use only if df_deals is already present
+    # df_deals = pd.read_csv("df_deals.csv")
 
     # Integrate the dataframes with the summary columns
     df_companies["nl_summary_info"] = df_companies.apply(company_summary, axis=1)
