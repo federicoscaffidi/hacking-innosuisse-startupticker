@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set your API key
-openai.api_key = "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"  # ← safer to use environment variable instead of hardcoding
+openai.api_key = "Insert your OpenAI key"  # ← safer to use environment variable instead of hardcoding
 
 def ask_chatgpt_for_analysis(model_output_text: str, user_query: str) -> tuple[str, str]:
     """
